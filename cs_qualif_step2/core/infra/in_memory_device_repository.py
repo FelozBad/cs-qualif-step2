@@ -19,3 +19,6 @@ class InMemoryDeviceRepository(DeviceRepository):
 
     def save(self, device: Device):
         self.devices[str(device.get_device_id())] = device
+
+    def find_by_timezone(self, timezone: str):
+        pass

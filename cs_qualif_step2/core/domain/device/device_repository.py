@@ -8,6 +8,10 @@ class DeviceRepository(ABC):
         pass
 
     @abstractmethod
+    def find_by_timezone(self, mac_address: str) -> Device | None:
+        pass
+
+    @abstractmethod
     def find_by_id(self, device_id: str) -> Device | None:
         pass
 
